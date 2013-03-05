@@ -1,9 +1,7 @@
-<h1> All Posts </h1>
+<h1> New Posts </h1>
 
-<% @posts.each do |p| %>
+<%= form_for @post do |f| %>
+  <%= f.label :description %>
 
-<%= p.description %>
-<%= link_to "Go", p.link %>
-<% end %>
 
-<%= link_to "New Post", new_post_path %>
+
